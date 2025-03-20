@@ -100,6 +100,5 @@ if (sortedArrOfObj.length > 0) {
   const csvFormat = `${headLine}\n${nextLine}`;
   console.log(csvFormat);
 } else {
-  //if no data!
   console.log("");
 }
