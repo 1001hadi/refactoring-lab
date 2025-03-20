@@ -6,8 +6,17 @@ const data =
 const separatedLine = data.split("\n");
 let refactoredArr = [];
 
+
 for (let line of separatedLine) {
   let cells = line.split(",");
   refactoredArr.push(cells);
-  console.log(refactoredArr);
+}
+
+for (let i = 0; i < refactoredArr.length; i++) {
+  console.log(
+    refactoredArr[i][0],
+    refactoredArr[i][1],
+    refactoredArr[i][2],
+    refactoredArr[i][3]
+  );
 }
