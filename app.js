@@ -81,3 +81,25 @@ sortedArrOfObj.splice(1, 0, {
 sortedArrOfObj.push({ id: "7", name: "Bilbo", occupation: "None", age: "111" });
 
 console.log(sortedArrOfObj);
+
+/////////////////
+// // 5th part
+///////////////
+
+if (sortedArrOfObj.length > 0) {
+  let headLine = Object.keys(sortedArrOfObj[0]).join(",");
+  let nextLine = "";
+
+  sortedArrOfObj.forEach((obj, idx) => {
+    let objValue = Object.values(obj).join(",");
+    nextLine += objValue;
+    if (idx < sortedArrOfObj.length - 1) {
+      nextLine += "\n";
+    }
+  });
+  const csvFormat = `${headLine}\n${nextLine}`;
+  console.log(csvFormat);
+} else {
+  //if no data!
+  console.log("");
+}
