@@ -25,7 +25,7 @@ const ArrayOfObj = [];
 // }
 
 ///////////
-// Expanding functionality
+// Expanding functionality to work with any number of rows.
 //////////
 
 // if (separatedLine.length > 0) {
@@ -46,7 +46,7 @@ const ArrayOfObj = [];
 // console.log(refactoredArr);
 
 ///////////
-// Transforming Data
+// Transforming Data to Array of Objects.
 //////////
 
 if (separatedLine.length > 0) {
@@ -56,6 +56,7 @@ if (separatedLine.length > 0) {
   for (let i = 1; i < separatedLine.length; i++) {
     let cells = separatedLine[i].split(",");
     if (cells.length === numberOfColumns) {
+      // i got hint from stack overflow for this part.
       let dataObj = {};
       for (let j = 0; j < numberOfColumns; j++) {
         dataObj[headCells[j]] = cells[j];
