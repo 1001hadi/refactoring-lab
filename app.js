@@ -66,4 +66,6 @@ if (separatedLine.length > 0) {
   }
 }
 
+let sortedArrOfObj = ArrayOfObj.sort();
+
 console.log(sortedArrOfObj);
