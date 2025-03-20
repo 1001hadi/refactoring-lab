@@ -5,6 +5,7 @@ const data =
   "ID,Name,Occupation,Age\n42,Bruce, Knight,41\n57,Bob,Fry Cook,19\n63,Blaine,Quiz Master,58\n98,Bill,Doctor’s Assistant,26";
 const separatedLine = data.split("\n");
 let refactoredArr = [];
+const ArrayOfObj = [];
 
 // // This is the refactor part.
 
@@ -26,19 +27,43 @@ let refactoredArr = [];
 // Expanding functionality
 //////////
 
+// if (separatedLine.length > 0) {
+//   // Create & store the headCells
+//   let headCells = separatedLine[0].split(",");
+//   let numberOfColumns = headCells.length;
+//   refactoredArr.push(headCells);
+
+//   for (let i = 1; i < separatedLine.length; i++) {
+//     let cells = separatedLine[i].split(",");
+//     if (cells.length === numberOfColumns) {
+//       refactoredArr.push(cells);
+//     } else {
+//       console.log(`The row ${i + 1} has extra columns, not printed!.`);
+//     }
+//   }
+// }
+// console.log(refactoredArr);
+
+///////////
+// Transforming Data
+//////////
+
 if (separatedLine.length > 0) {
-  // Create & store the headCells
   let headCells = separatedLine[0].split(",");
   let numberOfColumns = headCells.length;
-  refactoredArr.push(headCells);
 
   for (let i = 1; i < separatedLine.length; i++) {
     let cells = separatedLine[i].split(",");
     if (cells.length === numberOfColumns) {
-      refactoredArr.push(cells);
+      let dataObj = {};
+      for (let j = 0; j < numberOfColumns; j++) {
+        dataObj[headCells[j]] = cells[j];
+      }
+      ArrayOfObj.push(dataObj);
     } else {
       console.log(`The row ${i + 1} has extra columns, not printed!.`);
     }
   }
 }
-console.log(refactoredArr);
+
+console.log(sortedArrOfObj);
