@@ -1,11 +1,12 @@
 ////
 // yesterday code
 ////
-// const data =
-//   "ID,Name,Occupation,Age\n42,Bruce, Knight,41\n57,Bob,Fry Cook,19\n63,Blaine,Quiz Master,58\n98,Bill,Doctor’s Assistant,26";
-// const separatedLine = data.split("\n");
-// let refactoredArr = [];
-// const ArrayOfObj = [];
+
+const data =
+  "ID,Name,Occupation,Age\n42,Bruce, Knight,41\n57,Bob,Fry Cook,19\n63,Blaine,Quiz Master,58\n98,Bill,Doctor’s Assistant,26";
+const separatedLine = data.split("\n");
+let refactoredArr = [];
+const ArrayOfObj = [];
 
 // // This is the refactor part.
 
@@ -79,5 +80,3 @@ sortedArrOfObj.splice(1, 0, {
 sortedArrOfObj.push({ id: "7", name: "Bilbo", occupation: "None", age: "111" });
 
 console.log(sortedArrOfObj);
-
-
